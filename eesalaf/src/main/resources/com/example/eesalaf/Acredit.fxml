@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap" prefHeight="500.0" prefWidth="472.0" style="-fx-background-color: #d5d9de;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eesalaf.AcreditController">
+   <children>
+      <Pane layoutX="238.0" prefHeight="63.0" prefWidth="518.0" style="-fx-background-color: #09336b;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="162.0" layoutY="2.0" prefHeight="60.0" prefWidth="159.0" text="Credit" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="63.0" layoutX="127.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/command.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tableView" layoutX="33.0" layoutY="105.0" onMouseClicked="#availableAproduitSelect" prefHeight="343.0" prefWidth="454.0">
+         <columns>
+            <TableColumn fx:id="col_nom" minWidth="0.0" prefWidth="135.0" text="nom" />
+            <TableColumn fx:id="col_produitname" prefWidth="156.0" text="produit nom" />
+            <TableColumn fx:id="col_produitprice" minWidth="0.0" prefWidth="161.0" text="produit price" />
+         </columns>
+      </TableView>
+      <Button layoutX="175.0" layoutY="458.0" mnemonicParsing="false" onAction="#availableAproduitShowListData" onMouseClicked="#availableAproduitShowListData" prefHeight="26.0" prefWidth="169.0" style="-fx-background-color: green;" text="voir les credits" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap" prefHeight="500.0" prefWidth="472.0" style="-fx-background-color: #d5d9de;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eesalaf.AproduitController">
+   <children>
+      <Pane layoutX="238.0" prefHeight="63.0" prefWidth="518.0" style="-fx-background-color: #09336b;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="162.0" layoutY="2.0" prefHeight="60.0" prefWidth="159.0" text="Produit" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="54.0" fitWidth="66.0" layoutX="124.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/pro.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="-1.0" layoutY="73.0" prefHeight="151.0" prefWidth="518.0" style="-fx-background-color: #6f96c9;">
+         <children>
+            <Label layoutX="8.0" layoutY="15.0" text="Produit name :">
+               <font>
+                  <Font name="Verdana Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Produitname" layoutX="123.0" layoutY="10.0" promptText="produit name" />
+            <Label layoutX="20.0" layoutY="52.0" text="Produit price :">
+               <font>
+                  <Font name="Verdana Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Produitprice" layoutX="123.0" layoutY="47.0" promptText="produit price" />
+            <AnchorPane layoutX="353.0" layoutY="14.0" prefHeight="133.0" prefWidth="159.0" style="-fx-background-color: #abbdd4;">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="108.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="importBtn" layoutY="107.0" mnemonicParsing="false" onAction="#importImage" prefHeight="26.0" prefWidth="164.0" style="-fx-background-color: #09336b;" text="import image" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="deleteBtn" layoutX="76.0" layoutY="107.0" mnemonicParsing="false" onAction="#Delete" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: red;" text="delete" />
+            <Button fx:id="insertBtn" layoutX="203.0" layoutY="107.0" mnemonicParsing="false" onAction="#produitAdd" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: green;" text="Insert" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-2.0" layoutY="236.0" prefHeight="263.0" prefWidth="518.0" style="-fx-background-color: #6f96c9;">
+         <children>
+            <TableView fx:id="tableView" layoutX="50.0" layoutY="8.0" onMouseClicked="#availableAproduitSelect" onMouseMoved="#availableAproduitSelect" prefHeight="251.0" prefWidth="378.0">
+              <columns>
+                <TableColumn fx:id="col_produitname" prefWidth="182.0" text="Produit name" />
+                <TableColumn fx:id="col_produitprice" prefWidth="195.0" text="Produit Price" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

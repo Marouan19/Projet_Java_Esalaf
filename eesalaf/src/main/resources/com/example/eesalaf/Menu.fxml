@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eesalaf.MenuController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="184.0" style="-fx-background-color: #09336b;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="394.0" prefHeight="37.0" prefWidth="184.0" textFill="#ffffff00">
+               <font>
+                  <Font name="Verdana Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" prefHeight="38.0" prefWidth="202.0" text="Esalaf" textAlignment="CENTER">
+               <font>
+                  <Font name="Verdana Bold Italic" size="51.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.4556786703601108" centerY="0.2387173396674584" radius="0.661849710982659">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="184.0" textFill="#ffffff00">
+               <font>
+                  <Font name="Verdana Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onMouseClicked="#home" prefHeight="57.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#produit" prefHeight="57.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Produit" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#commande" prefHeight="57.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Commande" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="184.0" textFill="#ffffff00">
+               <font>
+                  <Font name="Verdana Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="305.0" prefHeight="37.0" prefWidth="184.0" text="Welcome :" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="username" alignment="CENTER" prefHeight="27.0" prefWidth="184.0" text="User" textFill="#fffb00">
+               <font>
+                  <Font name="Verdana Bold Italic" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="ap" prefHeight="500.0" prefWidth="472.0" style="-fx-background-color: #d5d9de;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="238.0" prefHeight="63.0" prefWidth="518.0" style="-fx-background-color: #09336b;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="162.0" layoutY="2.0" prefHeight="60.0" prefWidth="159.0" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold Italic" size="29.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="63.0" fitWidth="75.0" layoutX="117.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/icons8-home-page-30.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="-1.0" layoutY="62.0" prefHeight="438.0" prefWidth="519.0">
+               <children>
+                  <ImageView fitHeight="443.0" fitWidth="519.0" layoutX="1.0" layoutY="-2.0">
+                     <image>
+                        <Image url="@../../../image/Minimalist%20Beige%20Aesthetic%20Calendar%20Desktop%20Wallpaper.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="349.0" layoutY="59.0" mnemonicParsing="false" onMouseClicked="#produit" prefHeight="319.0" prefWidth="166.0" style="-fx-background-color: transparant;" />
+                  <Button layoutX="11.0" layoutY="59.0" mnemonicParsing="false" onMouseClicked="#commande" prefHeight="323.0" prefWidth="161.0" style="-fx-background-color: transparant;" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

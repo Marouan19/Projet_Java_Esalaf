@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap" prefHeight="500.0" prefWidth="472.0" style="-fx-background-color: #d5d9de;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eesalaf.AcommandeController">
+   <children>
+      <Pane layoutX="238.0" prefHeight="63.0" prefWidth="518.0" style="-fx-background-color: #09336b;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="140.0" layoutY="2.0" prefHeight="60.0" prefWidth="203.0" text="Commande" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="61.0" layoutX="88.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/command.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tableView" layoutX="32.0" layoutY="94.0" onMouseClicked="#availableAproduitSelect" prefHeight="343.0" prefWidth="454.0">
+        <columns>
+          <TableColumn fx:id="col_produitname" prefWidth="226.0" text="produit nom" />
+          <TableColumn fx:id="col_produitprice" minWidth="0.0" prefWidth="227.0" text="produit price" />
+        </columns>
+      </TableView>
+      <Button layoutX="165.0" layoutY="448.0" mnemonicParsing="false" onAction="#availableAproduitShowListData" onMouseClicked="#availableAproduitShowListData" prefHeight="26.0" prefWidth="169.0" style="-fx-background-color: green;" text="voir vous commande" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
